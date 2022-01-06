@@ -1,7 +1,7 @@
 <?php include 'includes/header.php';?>
-<div class="container">
+<div class="container w-50">
     <h1 class="mt-5 mb-4">Senhas salvas</h1>
-    <table class="table table-hover table-bordered">
+    <table class="table table-hover align-middle">
         <thead>
             <tr>
                 <th scope="col">Serviço</th>
@@ -15,19 +15,40 @@
                 <td>Facebook</td>
                 <td>email@email.com</td>
                 <td>password123</td>
-                <td></td>
+                <td width="200">
+                    <a class="btn btn-warning mx-2" href="#" role="button" style="color: white;">
+                        <span class="bi bi-pencil-fill" aria-hidden="true"></span>
+                    </a>
+                    <a class="btn btn-danger mx-2" href="#" role="button">
+                        <span class="bi bi-trash-fill" aria-hidden="true"></span>
+                    </a>
+                </td>
             </tr>
             <tr>
                 <td>Google</td>
                 <td>email@email.com</td>
                 <td>password321</td>
-                <td></td>
+                <td width="200">
+                    <a class="btn btn-warning mx-2" href="#" role="button" style="color: white;">
+                        <span class="bi bi-pencil-fill" aria-hidden="true"></span>
+                    </a>
+                    <a class="btn btn-danger mx-2" href="#" role="button">
+                        <span class="bi bi-trash-fill" aria-hidden="true"></span>
+                    </a>
+                </td>
             </tr>
             <tr>
                 <td>Reddit</td>
                 <td>email@email.com</td>
                 <td>321password</td>
-                <td></td>
+                <td width="200">
+                    <a class="btn btn-warning mx-2" href="#" role="button" style="color: white;">
+                        <span class="bi bi-pencil-fill" aria-hidden="true"></span>
+                    </a>
+                    <a class="btn btn-danger mx-2" href="#" role="button">
+                        <span class="bi bi-trash-fill" aria-hidden="true"></span>
+                    </a>
+                </td>
             </tr>
         </tbody>
     </table>
