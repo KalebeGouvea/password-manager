@@ -1,4 +1,4 @@
-<?php include 'includes/header.php';?>
+<?php include_once 'includes/header.php';?>
 <div class="container w-50">
     <h1 class="mt-5 mb-4">Senhas salvas</h1>
     <a class="btn btn-primary float-end" href="#" role="button">Adicionar</a>
@@ -54,4 +54,4 @@
         </tbody>
     </table>
 </div>
-<?php include 'includes/footer.php';?>
+<?php include_once 'includes/footer.php';?>

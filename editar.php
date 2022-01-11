@@ -1,4 +1,4 @@
-<?php include 'includes/header.php';?>
+<?php include_once 'includes/header.php';?>
 <div class="container w-50">
     <h1 class="mt-5 mb-4">Editar</h1>
     <form>
@@ -18,4 +18,4 @@
         <button type="reset" class="btn btn-outline-secondary">Limpar</button>
     </form>
 </div>
-<?php include 'includes/footer.php';?>
+<?php include_once 'includes/footer.php';?>
