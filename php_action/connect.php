@@ -2,8 +2,9 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
+$dbname = "crud_pm";
 
-$conn = mysqli_connect($servername, $username, $password);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 if (!$conn) {
     die("A conexão falhou: " . mysqli_connect_error());
