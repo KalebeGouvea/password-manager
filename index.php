@@ -5,7 +5,7 @@ include_once 'includes/header.php';
 
 <div class="container w-50">
     <h1 class="mt-5 mb-4">Senhas salvas</h1>
-    <a class="btn btn-primary float-end" href="#" role="button">Adicionar</a>
+    <a class="btn btn-primary float-end" href="adicionar.php" role="button">Adicionar</a>
     <table class="table table-hover align-middle">
         <thead>
             <tr>
