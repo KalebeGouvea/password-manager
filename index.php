@@ -17,7 +17,7 @@ include_once 'includes/header.php';
         </thead>
         <tbody>
             <?php
-            $sql = "SELECT servico, usuario, senha FROM dados";
+            $sql = "SELECT id, servico, usuario, senha FROM dados";
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
@@ -27,10 +27,10 @@ include_once 'includes/header.php';
                                 <td>'.$row["usuario"].'</td>
                                 <td>'.$row["senha"].'</td>
                                 <td width="200">
-                                    <a class="btn btn-warning mx-2" href="#" role="button" style="color: white;">
+                                    <a class="btn btn-warning mx-2" href="editar.php?id='.$row["id"].'" role="button" style="color: white;">
                                         <span class="bi bi-pencil-fill" aria-hidden="true"></span>
                                     </a>
-                                    <a class="btn btn-danger mx-2" href="#" role="button">
+                                    <a class="btn btn-danger mx-2" href="deletar.php?id='.$row["id"].'" role="button">
                                         <span class="bi bi-trash-fill" aria-hidden="true"></span>
                                     </a>
                                 </td>
