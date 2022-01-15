@@ -3,7 +3,7 @@
 <div class="container">
     <h1 class="mt-5 mb-4">Sobre</h1>
     <h4>Descrição</h4>
-    <p>O Gerenciador de Senhas é uma web application destinada a criação e organização das credenciais de usuário e senha dos 
+    <p>O Gerenciador de Senhas é uma web application com funcionalidades CRUD destinada a criação e organização das credenciais de usuário e senha dos 
     serviços utilizados pelo usuário, de maneira simples. O projeto foi criado primeiramente com o objetivo de explorar e desenvolver minhas 
     habilidades com PHP.
     </p>
