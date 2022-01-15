@@ -20,29 +20,28 @@ include_once 'includes/header.php';
             $sql = "SELECT id, servico, usuario, senha FROM dados";
             $result = mysqli_query($conn, $sql);
 
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo '<tr>
-                                <td>'.$row["servico"].'</td>
-                                <td>'.$row["usuario"].'</td>
-                                <td>'.$row["senha"].'</td>
-                                <td width="200">
-                                    <a class="btn btn-warning mx-2" href="editar.php?id='.$row["id"].'" role="button" style="color: white;">
-                                        <span class="bi bi-pencil-fill" aria-hidden="true"></span>
-                                    </a>
-                                    <a class="btn btn-danger mx-2" href="deletar.php?id='.$row["id"].'" role="button">
-                                        <span class="bi bi-trash-fill" aria-hidden="true"></span>
-                                    </a>
-                                </td>
-                            </tr>';
-                }
-            } else {
-                echo '<td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>';
-            }
-            ?>
+            if (mysqli_num_rows($result) > 0):
+                while ($row = mysqli_fetch_assoc($result)):?>
+                    <tr>
+                        <td><?php echo $row["servico"]; ?></td>
+                        <td><?php echo $row["usuario"]; ?></td>
+                        <td><?php echo $row["senha"]; ?></td>
+                        <td width="200">
+                            <a class="btn btn-warning mx-2" href="editar.php?id=<?php echo $row["id"]; ?>" role="button" style="color: white;">
+                                <span class="bi bi-pencil-fill" aria-hidden="true"></span>
+                            </a>
+                            <a class="btn btn-danger mx-2" href="deletar.php?id=<?php echo $row["id"]; ?>" role="button">
+                                <span class="bi bi-trash-fill" aria-hidden="true"></span>
+                            </a>
+                        </td>
+                    </tr>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            <?php endif; ?>
         </tbody>
     </table>
 </div>
