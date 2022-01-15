@@ -22,7 +22,7 @@
                                 <a class="nav-link" href="index.php">Senhas salvas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Sobre</a>
+                                <a class="nav-link" href="sobre.php">Sobre</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Olá, Usuário!</a>
