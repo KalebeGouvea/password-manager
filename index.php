@@ -30,11 +30,32 @@ include_once 'includes/header.php';
                             <a class="btn btn-warning mx-2" href="editar.php?id=<?php echo $row["id"]; ?>" role="button" style="color: white;">
                                 <span class="bi bi-pencil-fill" aria-hidden="true"></span>
                             </a>
-                            <a class="btn btn-danger mx-2" href="deletar.php?id=<?php echo $row["id"]; ?>" role="button">
+                            <a class="btn btn-danger mx-2" data-bs-toggle="modal" href="#modalDeletar<?php echo $row["id"]; ?>" role="button">
                                 <span class="bi bi-trash-fill" aria-hidden="true"></span>
                             </a>
                         </td>
                     </tr>
+
+                    <div class="modal fade" id="modalDeletar<?php echo $row["id"]; ?>" tabindex="-1" aria-labelledby="modalDeletarLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalDeletarLabel">Deletar</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Tem certeza que deseja deletar?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <form action="php_action/delete.php" method="POST">
+                                        <input type="hidden" name="formID" value="<?php echo $row["id"]; ?>">
+                                        <button type="submit" class="btn btn-danger" name="btn-deletar">Sim, deletar</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <?php endwhile; ?>
             <?php else: ?>
                 <td>-</td>
