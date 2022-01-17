@@ -1,6 +1,15 @@
 <footer class="footer mt-auto py-3 bg-light text-center">
             <div class="container">
-                <span class="text-muted">Desenvolvido por Kalebe Gouvea</span>
+                <span class="text-muted">Desenvolvido por Kalebe Gouvea - </span>
+                <a href="https://github.com/KalebeGouvea" target="_blank"  class="text-decoration-none">
+                    <i class="bi bi-github me-1" style="font-size: 1.2rem; color: gray;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/kalebe-gouvea/" target="_blank" class="text-decoration-none">
+                    <i class="bi bi-linkedin me-1" style="font-size: 1.2rem; color: gray;"></i>
+                </a>
+                <a href="mailto:k.gouvea@live.com" target="_blank" class="text-decoration-none">
+                    <i class="bi bi-envelope me-1" style="font-size: 1.2rem; color: gray;"></i>
+                </a>
             </div>
             
         </footer>
