@@ -1,8 +1,9 @@
 <?php
 require_once 'connect.php';
+require_once 'functions.php';
 
 if (isset($_POST['btn-deletar'])) {
-    $id = $_POST['formID'];
+    $id = test_input($_POST['formID']);
 
     $sql = "DELETE FROM dados WHERE id='$id'";
     if (mysqli_query($conn, $sql)) {
