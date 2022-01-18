@@ -8,12 +8,11 @@ if (isset($_POST['btn-editar'])) {
     $usuario = test_input($_POST['formUsuario']);
     $senha = test_input($_POST['formSenha']);
 
-    $sql = "UPDATE dados SET servico='$servico', usuario='$usuario', senha='$senha' WHERE id='$id'";
-    if (mysqli_query($conn, $sql)) {
-        header('Location: ../index.php?sucesso');
-    } else {
-        header('Location: ../index.php?falha');
-    }
+    $sql = "UPDATE dados SET servico=?, usuario=?, senha=? WHERE id=?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, 'ssss', $servico, $usuario, $senha, $id);
+    mysqli_stmt_execute($stmt);
+    mysqli_close($conn);
+    header('Location: ../index.php?sucesso');
 }
-mysqli_close($conn);
 ?>
