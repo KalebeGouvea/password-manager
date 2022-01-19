@@ -18,7 +18,9 @@ include_once 'includes/header.php';
         <tbody>
             <?php
             $sql = "SELECT id, servico, usuario, senha FROM dados";
-            $result = mysqli_query($conn, $sql);
+            $stmt = mysqli_prepare($conn, $sql);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
 
             if (mysqli_num_rows($result) > 0):
                 while ($row = mysqli_fetch_assoc($result)):?>
